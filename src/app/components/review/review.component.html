@@ -1,0 +1,42 @@
+<!-- Review Start -->
+<div class="review" id="review">
+  <div class="content-inner">
+    <div class="content-header">
+      <h2>Review</h2>
+    </div>
+    <div id="reviewCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div
+          class="carousel-item"
+          *ngFor="let data of reviewData; let i = index"
+          [ngClass]="{ active: i === current }"
+        >
+          <div class="review-slider-item">
+            <div class="review-text">
+              <p>
+                {{ data.description }}
+              </p>
+            </div>
+            <div class="review-img">
+              <img [src]="data.image" alt="Image" />
+              <div class="review-name">
+                <h3>{{ data.client }}</h3>
+                <p>{{ data.profession }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn mr-4" aria-hidden="true" (click)="prevReview()">
+          Previous
+        </button>
+
+        <button class="btn mr-4" aria-hidden="true" (click)="nextReview()">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Review End -->

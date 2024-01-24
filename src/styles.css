@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+/**********************************/
+/********** General CSS ***********/
+/**********************************/
+body {
+  color: #666666;
+  background: #f6d155;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: #222222;
+  transition: all 0.3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #ff6f61;
+  outline: none;
+  text-decoration: none;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+/**********************************/
+/******** Back to Top CSS *********/
+/**********************************/
+.back-to-top {
+  position: fixed;
+  display: none;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 1;
+  font-size: 30px;
+  right: 30px;
+  bottom: 30px;
+  transition: background 0.5s;
+  z-index: 11;
+}
+
+.back-to-top i {
+  color: #222222;
+}
+
+.back-to-top i:hover {
+  color: #ff6f61;
+}
+
+.back-to-top {
+  -webkit-animation: action 1s infinite alternate;
+  animation: action 1s infinite alternate;
+}
+
+@-webkit-keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}

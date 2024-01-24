@@ -1,0 +1,26 @@
+<div
+  [ngClass]="isExperience ? 'experience' : 'education'"
+  [id]="isExperience ? 'experience' : 'education'"
+>
+  <div class="content-inner">
+    <div class="content-header">
+      <h2>{{ isExperience ? "experience" : "education" }}</h2>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-md-6" *ngFor="let data of commonData">
+        <div [ngClass]="isExperience ? 'exp-col' : 'edu-col'">
+          <span>{{ data.startDate }} <i>to</i> {{ data.endDate }}</span>
+          <h3>{{ data.degree }}</h3>
+          <div *ngIf="isExperience">
+            <h4>{{ data.location }}</h4>
+            <h5>{{ data.position }}</h5>
+          </div>
+
+          <p>
+            {{ data.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
